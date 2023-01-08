@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+<head>
+    <meta charset="ISO-8859-1"/>
+    <title>International</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
+    <script src="internationalization.js"></script>
+</head>
+<body>
+
+<div class="jumbotron">
+    <h1 class="display-4" th:text="#{greeting}">Hello, world!</h1>
+    <p class="lead" th:text="#{messageRandom}"></p>
+    <hr class="my-4">
+    <p class="lead">
+    <div class="row">
+        <div class="col-md-4 mt-5 lead">
+            <form>
+                <div class="form-group">
+                    <label for="locales" th:text="#{lang.change}"></label>
+                    <select aria-label="Default select example" class="form-control select2-single" id="locales">
+                        <option value=""></option>
+                        <option th:text="#{lang.en}" value="en"></option>
+                        <option th:text="#{lang.fr}" value="fr"></option>
+                    </select>
+                </div>
+            </form>
+        </div>
+    </div>
+    </p>
+
+</div>
+
+<script th:src="@{/webjars/jquery/3.0.0/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/1.12.9-1/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/4.0.0-2/js/bootstrap.min.js}"></script>
+
+
+</body>
+</html>
